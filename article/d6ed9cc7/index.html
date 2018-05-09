@@ -44,6 +44,10 @@
 
 
 
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
 
 
 
@@ -81,7 +85,7 @@
     scheme: 'Mist',
     version: '6.2.0',
     sidebar: {"position":"left","display":"always","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: false,
+    fancybox: true,
     fastclick: false,
     lazyload: false,
     tabs: true,
@@ -451,6 +455,8 @@
 <h3 id="添加音乐"><a href="#添加音乐" class="headerlink" title="添加音乐"></a>添加音乐</h3><p>添加音乐很简单，只需要在markdown文件中加入iframe标签即可，示例：</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">frameborder</span>=<span class="string">"no"</span> <span class="attr">border</span>=<span class="string">"0"</span> <span class="attr">marginwidth</span>=<span class="string">"0"</span> <span class="attr">marginheight</span>=<span class="string">"0"</span> <span class="attr">width</span>=<span class="string">330</span> <span class="attr">height</span>=<span class="string">86</span> <span class="attr">src</span>=<span class="string">"http://music.163.com/outchain/player?type=2&amp;id=34578162&amp;auto=0&amp;height=66"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <p>然后需要做的就是将上面链接中的id的值替换成目标歌曲的id即可，可以去网易云音乐搜索音乐，从链接中获取id。更多玩法参考<a href="http://frankorz.com/2016/09/30/Hexo-patch/#添加音乐" target="_blank" rel="noopener">这里</a></p>
+<h3 id="开启图片点击预览"><a href="#开启图片点击预览" class="headerlink" title="开启图片点击预览"></a>开启图片点击预览</h3><p>1.NexT主题是支持图片预览的，使用的是<a href="http://fancyapps.com/fancybox/" target="_blank" rel="noopener">fancyBox</a>这个js库,要做的就是开启这个功能即可。</p>
+<p>2.打开主题配置文件,找到<code>fancybox: false</code>这个配置项，修改为<code>true</code>即可。</p>
 <p>参考：</p>
 <ul>
 <li><a href="https://notes.wanghao.work/2015-10-21-%E4%B8%BANexT%E4%B8%BB%E9%A2%98%E6%B7%BB%E5%8A%A0%E6%96%87%E7%AB%A0%E9%98%85%E8%AF%BB%E9%87%8F%E7%BB%9F%E8%AE%A1%E5%8A%9F%E8%83%BD.html#%E9%85%8D%E7%BD%AELeanCloud" target="_blank" rel="noopener">为NexT主题添加文章阅读量统计功能</a></li>
@@ -698,7 +704,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加阅读次数统计"><span class="nav-number">1.</span> <span class="nav-text">添加阅读次数统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加音乐"><span class="nav-number">2.</span> <span class="nav-text">添加音乐</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加阅读次数统计"><span class="nav-number">1.</span> <span class="nav-text">添加阅读次数统计</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加音乐"><span class="nav-number">2.</span> <span class="nav-text">添加音乐</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启图片点击预览"><span class="nav-number">3.</span> <span class="nav-text">开启图片点击预览</span></a></li></ol></div>
             
 
           </div>
@@ -735,6 +741,8 @@
 
 
 
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/theme-next/hexo-theme-next">NexT.Mist</a> v6.2.0</div>
 
 
 
@@ -782,6 +790,8 @@
 
 
 
+  
+
 
 
 
@@ -809,6 +819,11 @@
   
   
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
   
 
 
