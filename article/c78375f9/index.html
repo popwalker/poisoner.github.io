@@ -117,7 +117,7 @@
 <meta property="og:image" content="https://upload.wikimedia.org/wikipedia/commons/5/5e/Doubly-linked-list.svg">
 <meta property="og:image" content="https://my-bucket-1254096302.cos.ap-guangzhou.myqcloud.com/doubly-linked-list-insert-operate.png">
 <meta property="og:image" content="https://my-bucket-1254096302.cos.ap-guangzhou.myqcloud.com/doubly-linked-list-remove-operate.png">
-<meta property="og:updated_time" content="2018-07-08T02:52:33.129Z">
+<meta property="og:updated_time" content="2018-07-08T03:00:11.853Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Go源码学习之双向链表">
 <meta name="twitter:description" content="双向链表的定义双向链表也叫双链表，是链表的一种，它的每个数据结点中都有两个指针，分别指向直接后继和直接前驱。所以，从双向链表中的任意一个结点开始，都可以很方便地访问它的前驱结点和后继结点。一般我们都构造双向循环链表。 这里记录一下自己学习理解的过程 图解 Go的源码实现1.首先看一下链表中存储的元素(Element)的定义：1234567891011// 双向链表的一个元素 type Elemen">
@@ -396,7 +396,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2018-07-08 10:52:33" itemprop="dateModified" datetime="2018-07-08T10:52:33+08:00">2018-07-08</time>
+                <time title="修改时间：2018-07-08 11:00:11" itemprop="dateModified" datetime="2018-07-08T11:00:11+08:00">2018-07-08</time>
               
             
           </span>
@@ -488,6 +488,12 @@
 <figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// MoveBefore 移动元素e到元素mark之前</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(l *List)</span> <span class="title">MoveBefore</span><span class="params">(e, mark *Element)</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> e.list != l || mark.list != l || e == mark &#123;</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	l.insert(l.remove(e), mark.prev)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// MoveAfter 移动元素e到元素mark之后</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="params">(l *List)</span> <span class="title">MoveAfter</span><span class="params">(e, mark *Element)</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> e.list != l || e == mark || mark.list != l &#123;</span><br><span class="line">		<span class="keyword">return</span></span><br><span class="line">	&#125;</span><br><span class="line">	l.insert(l.remove(e), mark)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>上述代码均来自golang源码,详见<a href="https://golang.org/pkg/container/list/" target="_blank" rel="noopener">Go Doc</a></p>
 <h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>双向链表并不难理解，只要了理解了其数据结构和插入、删除的原理，就能迅速掌握。</p>
+<p>参考：</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Doubly_linked_list" target="_blank" rel="noopener">Doubly linked list - wikipedia</a></li>
+<li><a href="https://golang.org/pkg/container/list/" target="_blank" rel="noopener">container/list - Go Doc</a></li>
+<li><a href="https://www.cnblogs.com/skywang12345/p/3561803.html" target="_blank" rel="noopener">数组、单链表和双链表介绍 以及 双向链表的C/C++/Java实现</a></li>
+</ul>
 
       
     </div>
@@ -503,7 +509,7 @@
     
       <div>
         <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-  <div>赞赏是最好的支持与鼓励！</div>
+  <div>请作者吃个鸡腿吧！</div>
   <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
     <span>打赏</span>
   </button>
